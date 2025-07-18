@@ -39,7 +39,7 @@ rclone_umount(){
 }
 
 rclone_mount_all(){
-  rclone_mount onedrive: "${HOME}/Remotes/One Drive"
+  rclone_mount OneDrive: "${HOME}/Remotes/One Drive"
 }
 
 rclone_umount_all(){
