@@ -1,6 +1,6 @@
 # Notes about things
 
-`gdrive.sh`
+`rdrive.sh`
 
 Linux
 
@@ -21,7 +21,7 @@ rclone config
 mkdir -p ~/bin
 
 # copy the script into bin
-cp gdrive.sh ~/bin
+cp rdrive.sh ~/bin
 ```
 
 Windows

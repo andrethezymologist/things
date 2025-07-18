@@ -3,7 +3,7 @@
 
 # AUTOSTART_DIR=/etc/xdg/autostart
 AUTOSTART_DIR=~/.config/autostart
-AUTOSTART_FILE=${AUTOSTART_DIR}/google_drive.desktop
+AUTOSTART_FILE=${AUTOSTART_DIR}/rclone_drive.desktop
 
 config_gnome_autostart(){
   which $0 > /dev/null || echo "add $0 to your \$PATH"
@@ -13,10 +13,10 @@ config_gnome_autostart(){
 
 echo \
 "[Desktop Entry]
-Name=Google Drive
-GenericName=Rclone mount for google drive
-Comment=Rclone mount for google drive
-Exec=gdrive.sh
+Name=Rclone Drive
+GenericName=Rclone mount for online storage
+Comment=Rclone mount for online storage
+Exec=rdrive.sh
 Terminal=false
 Type=Application
 X-GNOME-Autostart-enabled=true
@@ -39,13 +39,11 @@ rclone_umount(){
 }
 
 rclone_mount_all(){
-  rclone_mount gdrive: "${HOME}/Remotes/Google Drive"
-  rclone_mount rh-gdrive: "${HOME}/Remotes/RH - Google Drive"
+  rclone_mount onedrive: "${HOME}/Remotes/One Drive"
 }
 
 rclone_umount_all(){
-  rclone_umount "${HOME}/Remotes/Google Drive"
-  rclone_umount "${HOME}/Remotes/RH - Google Drive"
+  rclone_umount "${HOME}/Remotes/One Drive"
 }
 
 config_gnome_autostart
