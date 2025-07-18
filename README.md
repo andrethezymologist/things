@@ -5,10 +5,15 @@
 Linux
 
 ```sh
-
 # git clone the repo
 git clone git@github.com:andrethezymologist/things.git
 cd things
+```
+
+Setup rclone
+
+```sh
+rclone config
 ```
 
 ```sh
