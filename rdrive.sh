@@ -30,6 +30,8 @@ rclone_mount(){
   [ -e "${MOUNT}" ] || mkdir -p "${MOUNT}"
   rclone mount \
     "${REMOTE}" "${MOUNT}" \
+    --vfs-cache-max-size 15GB \
+    --vfs-cache-max-age 24h \
     --vfs-cache-mode full &
 }
 
